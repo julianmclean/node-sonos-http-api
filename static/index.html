@@ -40,6 +40,10 @@
         <p><span class="method">GET</span> /unlockvolumes</p>
         <p><span class="method">GET</span> /pauseall/{timeout in minutes (optional)}</p>
         <p><span class="method">GET</span> /resumeall/{timeout in minutes (optional)}</p>
+        <p><span class="method">GET</span> /isolateall</p>
+        <p><span class="method">GET</span> /ungroupall</p>
+        <p><span class="method">GET</span> /addallfirst</p>
+        <p><span class="method">GET</span> /attachallfirst</p>
         <p><span class="method">GET</span> /reindex</p>
         <p><span class="method">GET</span> /sleep/{timeout in seconds or timestamp HH:MM:SS or off}</p>
         <p><span class="method">GET</span> /preset/{JSON preset}</p>
@@ -96,9 +100,19 @@
 
         <h4>Room Grouping</h4>
         <ul>
-          <li>add/{other zone name}</li>
-          <li>remove/{other zone name}</li>
-          <li>isolate</li>
+          <li>join/{other zone name to join on to}</li>
+          <li>joinfirst <span class="explanation">joins first other player found that is already playing</span></li>
+          <li>leave</li>
+          <li>add/{other zone name to add to this one}</li>
+          <li>attach/{other zone name to add to this one}</li>
+          <li>remove/{other zone name to detach from this one}</li>
+          <li>detach/{other zone name to detach from this one}</li>
+          <li>addall <span class="explanation">adds all other players to this one</span></li>
+          <li>attachall <span class="explanation">adds all other players to this one</span></li>
+          <li>removeall <span class="explanation">removes all other players from this one</span></li>
+          <li>detachall <span class="explanation">removes all other players from this one</span></li>
+          <li>isolate <span class="explanation">ungroups from any other players</span></li>
+          <li>ungroup <span class="explanation">ungroups from any other players</span></li>
         </ul>
 
         <h4>Other</h4>
